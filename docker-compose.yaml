@@ -2,5 +2,5 @@ version: '2.0'
 
 services:
   php-cli:
-    image: php:5.4-cli
+    image: "php:${PHP_TAG}"
     command: php -v
