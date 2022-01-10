@@ -26,9 +26,13 @@ jobs:
           - "5.4-cli"
           - "5.5-cli"
           - "5.6-cli"
+        some-version:
+          - 1.0
+          - 2.0
 
     env:
       PHP_TAG: ${{ matrix.php-tag }}
+      SOME_VERSION: ${{ matrix.some-version }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
