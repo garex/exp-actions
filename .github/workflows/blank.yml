@@ -27,8 +27,8 @@ jobs:
           - "5.5-cli"
           - "5.6-cli"
         some-version:
-          - 1.0
-          - 2.0
+          - "1.0"
+          - "2.0"
 
     env:
       PHP_TAG: ${{ matrix.php-tag }}
@@ -40,7 +40,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Which envs do we have?
-        run: env
+        run: env | sort
 
       - name: Start composa
         run: docker-compose up -d
