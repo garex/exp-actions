@@ -24,8 +24,6 @@ jobs:
       matrix:
         php-tag:
           - "5.4-cli"
-          - "5.5-cli"
-          - "5.6-cli"
         some-version:
           - "1.0"
           - "2.0"
@@ -47,3 +45,5 @@ jobs:
 
       - name: Read logs
         run: docker-compose logs -f php-cli
+      - name: Long test
+        run: for I in {1..10}; do echo -n .....; sleep 1; done
