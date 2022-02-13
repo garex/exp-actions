@@ -46,4 +46,4 @@ jobs:
       - name: Read logs
         run: docker-compose logs -f php-cli
       - name: Long test
-        run: for I in {1..10}; do echo -n .....; sleep 1; done
+        run: for I in {1..10}; do echo .....; sleep 1; done
